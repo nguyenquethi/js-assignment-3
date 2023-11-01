@@ -36,3 +36,27 @@ document.getElementById('btnSoDuongNhoNhat').addEventListener('click', function(
     }
     alert(`Số dương nhỏ nhất trong mảng ${minPos}`);
 });
+
+document.getElementById('btnSoChan').addEventListener('click', function() {
+    for (var i = arrSoN.length - 1; i < arrSoN.length; i--) {
+         if (arrSoN[i] % 2 == 0) {
+            var soChan = arrSoN[i];
+            break;
+         } else {
+            soChan = -1;
+         }
+    }
+    alert(`Số chẫn cuối cùng trong mảng ${soChan}`);
+});
+
+document.getElementById('btnDoiCho').addEventListener('click', function() {
+    var a  = document.getElementById('txt-ViTri1').value;
+    var b = document.getElementById('txt-ViTri2').value;
+
+    var temp = arrSoN[a];
+    arrSoN[a] = arrSoN[b];
+    arrSoN[b] = temp;
+
+    alert (arrSoN);
+});
+
